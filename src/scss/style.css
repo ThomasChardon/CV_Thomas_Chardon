@@ -1,31 +1,79 @@
-@keyframes hoverBoutons {
+@-webkit-keyframes hoverBoutons {
   0% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   20% {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   40% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   60% {
-    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
   }
   80% {
-    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
   }
   100% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
-@keyframes stopHover {
+
+@keyframes hoverBoutons {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  60% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  80% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes stopHover {
   from {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   to {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
+
+@keyframes stopHover {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -36,17 +84,27 @@ input:focus {
   outline: none;
   border: 2px solid #e9bb88;
 }
+
 input:not(:focus):not(:placeholder-shown):invalid {
   border: 2px solid red;
 }
 
 button {
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 50px;
   height: 50px;
   border-radius: 30px;
@@ -54,10 +112,13 @@ button {
   margin-top: 30px;
   margin-bottom: 30px;
   cursor: pointer;
-  animation: stopHover 200ms;
+  -webkit-animation: stopHover 200ms;
+          animation: stopHover 200ms;
 }
+
 button:hover {
-  animation: hoverBoutons 125ms ease-in-out alternate forwards;
+  -webkit-animation: hoverBoutons 125ms ease-in-out alternate forwards;
+          animation: hoverBoutons 125ms ease-in-out alternate forwards;
 }
 
 .bouton_delete_panier, #bouton_delete_panier {
@@ -73,16 +134,19 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
 @media screen and (min-width: 1100px) and (max-width: 1599px) {
   .max-width-container {
     width: 1060px;
   }
 }
+
 @media screen and (min-width: 600px) and (max-width: 1099px) {
   .max-width-container {
     width: 530px;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 599px) {
   .max-width-container {
     width: 300px;
@@ -92,42 +156,71 @@ body {
 header {
   background-color: #f3e9f0;
 }
+
 @media screen and (min-width: 320px) and (max-width: 599px) {
   header .logo {
     height: 140px;
   }
 }
+
 header .entete {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   header .entete {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 header .entete nav ul {
   width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   list-style-type: none;
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 2em;
 }
+
 @media screen and (min-width: 320px) and (max-width: 599px) {
   header .entete nav ul {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 200px;
   }
 }
+
 header .entete nav ul li, header .entete nav ul a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 header .entete nav ul #pastille_panier {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 30px;
   height: 30px;
   border-radius: 30px;
@@ -139,55 +232,73 @@ header .entete nav ul #pastille_panier {
 }
 
 footer {
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 2em;
-  background-color: #c1a4ff;
+  background-color: blue;
 }
+
 footer .footer {
   padding-top: 65px;
   padding-bottom: 65px;
 }
+
 footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   list-style-type: none;
 }
+
 @media screen and (min-width: 320px) and (max-width: 599px) {
   footer ul {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-left: 0;
   }
 }
+
 footer ul li {
   margin: 0 0 30px 0;
 }
 
 @media screen and (min-width: 320px) and (max-width: 1599px) {
   .contenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
+
 .contenu h1 {
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 2em;
   margin-left: 65px;
   margin-bottom: 65px;
 }
+
 @media screen and (min-width: 320px) and (max-width: 599px) {
   .contenu h1 {
-    font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     font-size: 1.5em;
   }
 }
 
 .liste_articles_accueil {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .article {
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 1em;
   margin-right: 65px;
   margin-left: 65px;
@@ -195,10 +306,12 @@ footer ul li {
   width: 400px;
   height: 300px;
   border-radius: 20px;
-  box-shadow: 0 4px 4px #e6e6e6;
+  -webkit-box-shadow: 0 4px 4px #e6e6e6;
+          box-shadow: 0 4px 4px #e6e6e6;
   color: #000;
   overflow: hidden;
 }
+
 @media screen and (min-width: 320px) and (max-width: 599px) {
   .article {
     margin-right: 0;
@@ -206,65 +319,93 @@ footer ul li {
     width: 300px;
   }
 }
+
 .article div {
   height: 250px;
   overflow: hidden;
 }
+
 .article a {
   width: 100%;
 }
+
 .article .produit_ours {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+
 .article:hover a img {
-  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+
 .article h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: auto;
   margin-top: 5px;
 }
 
 .produit_seul {
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 1em;
   margin-right: 65px;
   margin-left: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 500px;
   margin-top: 65px;
   margin-bottom: 65px;
   border-radius: 20px;
-  box-shadow: 0 6px 6px #cccccc;
+  -webkit-box-shadow: 0 6px 6px #cccccc;
+          box-shadow: 0 6px 6px #cccccc;
   overflow: hidden;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1599px) {
   .produit_seul {
-    font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     font-size: small;
     margin-left: 0;
     margin-right: 0;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .produit_seul {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     height: 1000px;
   }
 }
+
 .produit_seul .description_produit {
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 2em;
   width: 50%;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .produit_seul .description_produit {
     width: 90%;
@@ -273,147 +414,220 @@ footer ul li {
     height: 400px;
   }
 }
+
 .produit_seul div {
   width: 50%;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .produit_seul div {
     width: 100%;
   }
 }
+
 .produit_seul h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 1em;
   margin: 0;
   margin-right: auto;
   margin-left: auto;
 }
+
 .produit_seul .produit_ours {
   width: 100%;
   height: 510px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .produit_seul .produit_ours {
     height: 600px;
     border-bottom-right-radius: 0;
   }
 }
+
 .produit_seul .produit_ours:hover {
-  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
 .titre_panier {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 65px;
   margin-top: 65px;
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 2em;
 }
+
 .titre_panier h1 {
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 1.5em;
   margin: 0;
   margin-left: 65px;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .titre_panier h1 {
-    font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     font-size: 1em;
   }
 }
+
 .titre_panier #suppression_panier {
   background-color: #ff6a6a;
 }
 
 .article_panier {
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 65px;
   width: 100%;
   height: 200px;
   border-radius: 20px;
-  box-shadow: 0 4px 4px #e6e6e6;
+  -webkit-box-shadow: 0 4px 4px #e6e6e6;
+          box-shadow: 0 4px 4px #e6e6e6;
   color: #000;
   overflow: hidden;
 }
+
 @media screen and (min-width: 1100px) and (max-width: 1600px) {
   .article_panier {
-    font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     font-size: small;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .article_panier {
-    font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     font-size: small;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 450px;
   }
 }
+
 .article_panier div {
   overflow: hidden;
 }
+
 .article_panier .renseignements_panier {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 2em;
   width: 70%;
 }
+
 @media screen and (min-width: 1100px) and (max-width: 1600px) {
   .article_panier .renseignements_panier {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .article_panier .renseignements_panier {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     margin-top: 20px;
   }
 }
+
 .article_panier .renseignements_panier .div_boutons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 25%;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1600px) {
   .article_panier .renseignements_panier .div_boutons {
     width: 100%;
     height: 80px;
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 1600px) {
   .article_panier .renseignements_panier .div_boutons button {
     margin: 10px;
   }
 }
+
 .article_panier .renseignement_texte {
   width: 70%;
   height: 40px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1600px) {
   .article_panier .renseignement_texte {
     margin-top: 0;
@@ -423,161 +637,221 @@ footer ul li {
     margin-left: auto;
   }
 }
+
 @media screen and (min-width: 600px) and (max-width: 1099px) {
   .article_panier .renseignement_texte {
     height: 80px;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 599px) {
   .article_panier .renseignement_texte {
-    font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     font-size: small;
   }
 }
+
 .article_panier #titre_total {
   width: 200px;
 }
+
 .article_panier .bordure_panier {
   width: 5px;
   height: 100%;
   background-color: #e6e6e6;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .article_panier .bordure_panier {
     display: none;
   }
 }
+
 .article_panier .produit_ours_panier {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  transform-origin: left;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .article_panier .produit_ours_panier {
-    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
   }
 }
+
 .article_panier .photo_produit_panier {
   width: 33%;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .article_panier .photo_produit_panier {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 100%;
     height: 200px;
   }
 }
+
 .article_panier:hover a img {
-  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+
 .article_panier h2 {
   width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-right: 30px;
   padding-left: 30px;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .article_panier h2 {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
 .renseignement_finalisation {
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   border-radius: 20px;
-  box-shadow: 0 4px 4px #e6e6e6;
+  -webkit-box-shadow: 0 4px 4px #e6e6e6;
+          box-shadow: 0 4px 4px #e6e6e6;
   background-color: #e6e6e6;
   height: 350px;
   margin-bottom: 65px;
 }
+
 @media screen and (min-width: 1100px) and (max-width: 1600px) {
   .renseignement_finalisation {
     width: 100%;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .renseignement_finalisation {
-    font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     font-size: 1em;
     width: 100%;
     height: 500px;
     margin-top: 50px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 @media screen and (min-width: 1100px) and (max-width: 1600px) {
   .renseignement_finalisation h2 {
-    font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     font-size: 1em;
   }
 }
+
 .renseignement_finalisation #renseignement_total {
   margin-left: 30px;
   text-align: center;
 }
+
 .renseignement_finalisation .renseignements_panier {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 1em;
   height: 100%;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .renseignement_finalisation .renseignements_panier {
     width: 80%;
   }
 }
+
 .renseignement_finalisation .renseignements_panier div {
   width: 100%;
 }
+
 .renseignement_finalisation .renseignements_panier div label {
   display: inline-block;
   clear: left;
   width: 250px;
   text-align: right;
 }
+
 @media screen and (min-width: 320px) and (max-width: 600px) {
   .renseignement_finalisation .renseignements_panier div label {
     text-align: center;
   }
 }
+
 .renseignement_finalisation .renseignements_panier div input {
   display: inline-block;
   height: 30px;
   width: 400px;
   border-radius: 20px;
 }
+
 @media screen and (min-width: 320px) and (max-width: 600px) {
   .renseignement_finalisation .renseignements_panier div input {
     width: 230px;
   }
 }
+
 .renseignement_finalisation .renseignements_panier div .bouton_commander {
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 1em;
   width: 400px;
   position: relative;
   left: -150px;
   margin-top: 10px;
 }
+
 @media screen and (min-width: 1100px) and (max-width: 1600px) {
   .renseignement_finalisation .renseignements_panier div .bouton_commander {
     left: -50px;
   }
 }
+
 @media screen and (min-width: 600px) and (max-width: 1099px) {
   .renseignement_finalisation .renseignements_panier div .bouton_commander {
     margin-top: 20px;
@@ -585,6 +859,7 @@ footer ul li {
     width: 250px;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 599px) {
   .renseignement_finalisation .renseignements_panier div .bouton_commander {
     margin-top: 20px;
@@ -594,76 +869,100 @@ footer ul li {
 }
 
 #finalisation {
-  font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
   font-size: 2em;
   margin-right: 2em;
   margin-left: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 600px;
   border-radius: 40px;
-  box-shadow: 0 4px 4px #e6e6e6;
+  -webkit-box-shadow: 0 4px 4px #e6e6e6;
+          box-shadow: 0 4px 4px #e6e6e6;
   background-color: #e9bb88;
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1600px) {
   #finalisation {
     padding: 50px;
   }
 }
+
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   #finalisation {
     height: 700px;
   }
 }
+
 @media screen and (min-width: 600px) and (max-width: 799px) {
   #finalisation {
     height: 600px;
-    font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     font-size: 1.5em;
-    align-content: space-between;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 599px) {
   #finalisation {
-    font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     font-size: 1.1em;
   }
 }
+
 #finalisation #adresse_facturation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 20px;
-  box-shadow: 0 4px 4px #000;
+  -webkit-box-shadow: 0 4px 4px #000;
+          box-shadow: 0 4px 4px #000;
   background-color: #f3e9f0;
   height: 150px;
   width: 900px;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1600px) {
   #finalisation #adresse_facturation {
     padding: 20px;
   }
 }
+
 @media screen and (min-width: 800px) and (max-width: 1100px) {
   #finalisation #adresse_facturation {
     width: 500px;
   }
 }
+
 @media screen and (min-width: 600px) and (max-width: 799px) {
   #finalisation #adresse_facturation {
     width: 350px;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 599px) {
   #finalisation #adresse_facturation {
-    font-family: "Architects Daughter", cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     height: 200px;
     width: 150px;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
