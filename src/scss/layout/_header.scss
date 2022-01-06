@@ -1,12 +1,7 @@
 //Header
 
 header {
-    background-color: $couleur-secondaire;
-    .logo {
-        @media screen and (min-width: 320px) and (max-width: 599px)  {
-            height: 140px;
-        }
-    }
+    background-color: $couleur-tertiaire;
     .entete {
         display: flex;
         justify-content: space-around;
@@ -14,31 +9,15 @@ header {
         @media screen and (min-width: 320px) and (max-width: 1099px)  {
             flex-direction: column;
         } 
-        nav ul
-        {
-            width: 600px;
-            display: flex;
-            justify-content: space-around;
-            list-style-type: none;
-            @include police($large);
-            @media screen and (min-width: 320px) and (max-width: 599px)  {
-                flex-direction: column;
-                width: 200px;
-            }
-            li, a {
-                display: flex;
-            }
-            #pastille_panier {
-                @include flex_center(center);
-                width: 30px;
-                height: 30px;
-                border-radius: 30px;
-                position: relative;// sert à positionner la pastille sur l'icone a 10 px en haut et 110 a gauche
-                left: -110px;
-                top : -10px;
-                font-size:0.7em;
-                background-color: red;
-            }
+
+        .entete_nom {
+            @include police(2em);
+        }
+        .photo_thomas {
+            border-radius: 1em;
+            // @media screen and (min-width: 320px) and (max-width: 599px)  {
+            //     height: 240px;
+            // }
         }
     }
 }
