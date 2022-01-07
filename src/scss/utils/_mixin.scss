@@ -6,7 +6,7 @@
     align-items: $align-center;
 }
 
-@mixin police($grand :1em)
+@mixin police($grand :1.3em)
 {
     font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
     font-size: $grand;

@@ -158,11 +158,11 @@ header {
 }
 
 header .entete {
+  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
+  font-size: 2.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -177,13 +177,24 @@ header .entete {
   }
 }
 
-header .entete .entete_nom {
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 2em;
+header .entete .photo_cv {
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header .entete .photo_thomas {
-  border-radius: 1em;
+  -webkit-clip-path: ellipse(50% 45%);
+          clip-path: ellipse(50% 45%);
+}
+
+header .entete .entete_nom {
+  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
 }
 
 footer {
@@ -220,7 +231,12 @@ footer ul li {
   margin: 0 0 30px 0;
 }
 
-@media screen and (min-width: 320px) and (max-width: 1599px) {
+.contenu {
+  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 2499px) {
   .contenu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -230,94 +246,32 @@ footer ul li {
   }
 }
 
-.contenu h1 {
+.contenu .contenu_gauche {
+  width: 350px;
+  text-align: center;
+}
+
+.contenu .contenu_gauche .liste_contenu_gauche div {
   font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  margin-left: 65px;
-  margin-bottom: 65px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 599px) {
-  .contenu h1 {
-    font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-  }
-}
-
-.liste_articles_accueil {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.article {
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  margin-right: 65px;
-  margin-left: 65px;
-  margin-bottom: 65px;
-  width: 400px;
-  height: 300px;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 4px 4px #e6e6e6;
-          box-shadow: 0 4px 4px #e6e6e6;
-  color: #000;
-  overflow: hidden;
-}
-
-@media screen and (min-width: 320px) and (max-width: 599px) {
-  .article {
-    margin-right: 0;
-    margin-left: 0;
-    width: 300px;
-  }
-}
-
-.article div {
-  height: 250px;
-  overflow: hidden;
-}
-
-.article a {
-  width: 100%;
-}
-
-.article .produit_ours {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.article:hover a img {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.article h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  font-size: 0.75em;
+  font-weight: bold;
+  width: 250px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: auto;
-  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contenu .contenu_droite .liste_contenu_droite div {
+  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+  font-weight: bold;
 }
 
 .produit_seul {
   font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1.3em;
   margin-right: 65px;
   margin-left: 65px;
   display: -webkit-box;
@@ -401,7 +355,7 @@ footer ul li {
       -ms-flex-align: center;
           align-items: center;
   font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1.3em;
   margin: 0;
   margin-right: auto;
   margin-left: auto;
@@ -465,7 +419,7 @@ footer ul li {
 
 .article_panier {
   font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1.3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -752,7 +706,7 @@ footer ul li {
       -ms-flex-align: center;
           align-items: center;
   font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1.3em;
   height: 100%;
 }
 
