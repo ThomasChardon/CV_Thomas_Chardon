@@ -80,6 +80,11 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  text-decoration: underline;
+  background-color: #e0c9be;
+}
+
 input:focus {
   outline: none;
   border: 2px solid #E1741A;
@@ -153,10 +158,6 @@ body {
   }
 }
 
-header {
-  background-color: #C6D9F1;
-}
-
 header .entete {
   font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
   font-size: 2.5em;
@@ -179,6 +180,7 @@ header .entete {
 
 header .entete .photo_cv {
   width: 350px;
+  background-color: #C6D9F1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,9 +189,17 @@ header .entete .photo_cv {
           justify-content: center;
 }
 
+header .entete .photo_cv a:hover {
+  background-color: transparent;
+}
+
 header .entete .photo_thomas {
   -webkit-clip-path: ellipse(50% 45%);
           clip-path: ellipse(50% 45%);
+}
+
+header .entete .titre {
+  margin-left: 30px;
 }
 
 header .entete .entete_nom {
@@ -200,35 +210,16 @@ header .entete .entete_nom {
 footer {
   font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
   font-size: 2em;
-  background-color: #C6D9F1;
 }
 
 footer .footer {
-  padding-top: 65px;
-  padding-bottom: 65px;
+  height: 300px;
 }
 
-footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  list-style-type: none;
-}
-
-@media screen and (min-width: 320px) and (max-width: 599px) {
-  footer ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-left: 0;
-  }
-}
-
-footer ul li {
-  margin: 0 0 30px 0;
+footer .footer .contenu_gauche {
+  width: 350px;
+  height: 300px;
+  background-color: #C6D9F1;
 }
 
 .contenu {
@@ -248,6 +239,7 @@ footer ul li {
 
 .contenu .contenu_gauche {
   width: 350px;
+  background-color: #C6D9F1;
   text-align: center;
 }
 
@@ -265,6 +257,10 @@ footer ul li {
           align-items: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.contenu .contenu_droite {
+  margin-left: 30px;
 }
 
 .contenu .contenu_droite .liste_contenu_droite h3 {

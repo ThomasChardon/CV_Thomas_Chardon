@@ -8,6 +8,7 @@
     } 
     .contenu_gauche {
         width: 350px;
+        background-color: $couleur-tertiaire;
         text-align: center;
         .liste_contenu_gauche {
             h3{
@@ -24,6 +25,7 @@
         }
     }
     .contenu_droite {
+        margin-left : 30px;
         .liste_contenu_droite {
             h3{
                 color : $couleur-primaire;

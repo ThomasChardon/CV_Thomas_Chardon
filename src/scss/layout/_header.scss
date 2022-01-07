@@ -1,7 +1,7 @@
 //Header
 
 header {
-    background-color: $couleur-tertiaire;
+    // background-color: $couleur-tertiaire;
     .entete {
         @include police(2.5em);
         display: flex;
@@ -12,11 +12,18 @@ header {
         } 
         .photo_cv {
             width: 350px;
+            background-color: $couleur-tertiaire;
             display: flex;
             justify-content: center;
+            a:hover {
+                background-color: transparent;
+            }
         }
         .photo_thomas {
             clip-path:ellipse(50% 45%);
+        }
+        .titre {
+            margin-left : 30px;
         }
         .entete_nom {
             @include police(1.5em);

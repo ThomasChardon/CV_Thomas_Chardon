@@ -5,6 +5,10 @@ a {
     color:$noir;
     cursor: pointer;
 }
+a:hover {
+    text-decoration:underline;
+    background-color: $couleur-secondaire;
+}
 
 // formulaire
 
