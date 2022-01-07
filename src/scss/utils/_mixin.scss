@@ -17,3 +17,22 @@
     margin-right: $specification;
     margin-left: $specification;
 }
+
+@mixin puces-liste() // puces personnalisées, à placer dans la div qui contient la liste
+{
+    ul {
+        padding: 0;
+        li{
+            list-style-type: none;
+            padding-bottom: 8px;
+        }
+        li:before {
+            content: " ";
+            background: linear-gradient(45deg, $couleur-secondaire, $couleur-primaire);
+            padding: 0 9px 0;
+            margin-right: 10px;
+            -moz-border-radius: 40px;
+            border-radius: 40px;
+      }
+    }
+}

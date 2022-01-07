@@ -31,20 +31,7 @@
             div{
                 @include police(0.75em);
                 font-weight: bold;
-                ul {
-                    padding: 0;
-                    li{
-                        list-style-type: none;
-                    }
-                    li:before {
-                        content: " ";
-                        background: #f69ec4;
-                        padding: 0 8px 0;
-                        margin-right: 10px;
-                        -moz-border-radius: 40px;
-                        border-radius: 40px;
-                  }
-                }
+                @include puces-liste();
             }
         }
     }
