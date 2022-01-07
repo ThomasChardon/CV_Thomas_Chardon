@@ -82,7 +82,7 @@ a {
 
 input:focus {
   outline: none;
-  border: 2px solid #e9bb88;
+  border: 2px solid #E1741A;
 }
 
 input:not(:focus):not(:placeholder-shown):invalid {
@@ -108,7 +108,7 @@ button {
   width: 50px;
   height: 50px;
   border-radius: 30px;
-  background-color: #e9bb88;
+  background-color: #E1741A;
   margin-top: 30px;
   margin-bottom: 30px;
   cursor: pointer;
@@ -251,6 +251,10 @@ footer ul li {
   text-align: center;
 }
 
+.contenu .contenu_gauche .liste_contenu_gauche h3 {
+  color: #E1741A;
+}
+
 .contenu .contenu_gauche .liste_contenu_gauche div {
   font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
   font-size: 0.75em;
@@ -263,10 +267,31 @@ footer ul li {
   margin-right: auto;
 }
 
+.contenu .contenu_droite .liste_contenu_droite h3 {
+  color: #E1741A;
+}
+
 .contenu .contenu_droite .liste_contenu_droite div {
   font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
   font-size: 0.75em;
   font-weight: bold;
+}
+
+.contenu .contenu_droite .liste_contenu_droite div ul {
+  padding: 0;
+}
+
+.contenu .contenu_droite .liste_contenu_droite div ul li {
+  list-style-type: none;
+}
+
+.contenu .contenu_droite .liste_contenu_droite div ul li:before {
+  content: " ";
+  background: #f69ec4;
+  height: 2px;
+  padding: 0 8px 0;
+  margin-right: 10px;
+  border-radius: 40px;
 }
 
 .produit_seul {
@@ -799,7 +824,7 @@ footer ul li {
   border-radius: 40px;
   -webkit-box-shadow: 0 4px 4px #e6e6e6;
           box-shadow: 0 4px 4px #e6e6e6;
-  background-color: #e9bb88;
+  background-color: #E1741A;
   margin-top: 2em;
   margin-bottom: 2em;
 }
