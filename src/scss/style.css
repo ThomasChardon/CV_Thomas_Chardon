@@ -258,6 +258,15 @@ footer .footer .contenu_gauche {
   margin-right: auto;
 }
 
+.contenu .contenu_gauche .liste_contenu_gauche div ul {
+  padding: 0;
+}
+
+.contenu .contenu_gauche .liste_contenu_gauche div ul li {
+  list-style-type: none;
+  padding-bottom: 8px;
+}
+
 .contenu .contenu_droite {
   margin-left: 30px;
 }
