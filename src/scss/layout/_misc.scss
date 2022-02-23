@@ -45,6 +45,7 @@ button {
 .bouton_delete_panier, #bouton_delete_panier {
     background-color: $couleur-rouge-leger;
 }
+
 //body
 body {
     margin : 0;
@@ -60,7 +61,7 @@ body {
         width: 1200px;
     } 
     @media screen and (min-width: 600px) and (max-width: 1099px)  {
-        width: 530px;
+        width: 700px;
     } 
     @media screen and (min-width: 320px) and (max-width: 599px)  {
         width: 300px;

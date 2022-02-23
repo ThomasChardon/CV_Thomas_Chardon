@@ -1,12 +1,22 @@
 //footer
 footer {
     @include police($large);
+    @media screen and (min-width: 320px) and (max-width: 599px)  {
+        width: 100%;
+        background-color: $couleur-tertiaire;
+    } 
     .footer{
         height: 300px;
         .contenu_gauche {
             width: 350px;
             height: 300px;
             background-color: $couleur-tertiaire;
+            @media screen and (min-width: 600px) and (max-width: 1099px)  {
+                width: 200px;
+            } 
+            @media screen and (min-width: 320px) and (max-width: 599px)  {
+                width: 100%;
+            } 
         }
     }
 }

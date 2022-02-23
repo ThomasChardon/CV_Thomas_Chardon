@@ -2,17 +2,29 @@
 // articles 
 .contenu {
     @include police();
-    @media screen and (min-width: 320px) and (max-width: 4001px)  {
+    @media screen and (min-width: 599px) and (max-width: 4001px)  {
         display: flex;
         flex-wrap: wrap;
+    } 
+    @media screen and (min-width: 320px) and (max-width: 599px)  {
+        width: 100%;
     } 
     .contenu_gauche {
         width: 350px;
         background-color: $couleur-tertiaire;
         text-align: center;
+        @media screen and (min-width: 600px) and (max-width: 1099px)  {
+            width: 200px;
+        } 
+        @media screen and (min-width: 320px) and (max-width: 599px)  {
+            width: 100%;
+            background: linear-gradient($couleur-tertiaire, white);
+            // background-color: $couleur-tertiaire;
+        } 
         .liste_contenu_gauche {
             h3{
                 color : $couleur-primaire;
+                margin-top: 0;
             }
             div {
                 @include police(0.75em);
@@ -21,6 +33,16 @@
                 align-items: center;
                 margin-left: auto;
                 margin-right: auto;
+                @media screen and (min-width: 600px) and (max-width: 1099px)  {
+                    width: 175px;
+                    overflow-wrap: break-word;
+                    font-weight:normal;
+                } 
+                @media screen and (min-width: 320px) and (max-width: 599px)  {
+                    width: 275px;
+                    overflow-wrap: break-word;
+                    font-weight:normal;
+                }
                 ul {
                     padding: 0;
                     li{
@@ -31,22 +53,34 @@
             }
         }
     }
-    .contenu_droite { // to do : resolutions en dessous de 1100. tester avec edge aussi
+    .Contact {
+        padding-top: 25px;
+    }
+    .contenu_droite {
         width: 1200px;
+        margin-left : 30px;
         @media screen and (min-width: 1100px) and (max-width: 1599px)  {
             width: 700px;
         } 
-        // @media screen and (min-width: 600px) and (max-width: 1099px)  {
-        //     width: 530px;
-        // } 
-        // @media screen and (min-width: 320px) and (max-width: 599px)  {
-        //     width: 300px;
-        // } 
-        margin-left : 30px;
+        @media screen and (min-width: 600px) and (max-width: 1099px)  {
+            width: 450px;
+        } 
+        @media screen and (min-width: 320px) and (max-width: 599px)  {
+            width: 100%;
+            margin-left : 0;
+            padding-left: 30px;
+            background: linear-gradient(white, $couleur-tertiaire);
+        } 
         .liste_contenu_droite { 
+            @media screen and (min-width: 320px) and (max-width: 599px)  {
+                width: 85%;
+            } 
             h3{
                 color : $couleur-primaire;
                 position: relative;
+                @media screen and (min-width: 320px) and (max-width: 599px)  {
+                    text-align: center;
+                } 
             }
             h3:after {
                 display: inline-block;
@@ -62,11 +96,20 @@
                 @media screen and (min-width: 1100px) and (max-width: 1599px)  {
                     width: 800px;
                 } 
+                @media screen and (min-width: 600px) and (max-width: 1099px)  {
+                    width: 400px;
+                } 
+                @media screen and (min-width: 320px) and (max-width: 599px)  {
+                    display: none;
+                }
               }
             div{
                 @include police(0.75em);
                 font-weight: bold;
                 @include puces-liste();
+                @media screen and (min-width: 320px) and (max-width: 1099px)  {
+                    font-weight:normal;
+                } 
             }
         }
     }
