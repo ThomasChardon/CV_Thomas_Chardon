@@ -327,8 +327,33 @@ footer .footer .contenu_gauche {
 }
 
 .contenu .contenu_gauche .liste_contenu_gauche h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #E1741A;
   margin-top: 0;
+}
+
+.contenu .contenu_gauche .liste_contenu_gauche h3 .deco_h_gauche {
+  content: "";
+  height: 4px;
+  background: black;
+  width: 15%;
+  margin-left: 0;
+}
+
+.contenu .contenu_gauche .liste_contenu_gauche h3 .deco_h_droite {
+  content: "";
+  height: 4px;
+  background: black;
+  width: 15%;
+  margin-right: 0;
 }
 
 .contenu .contenu_gauche .liste_contenu_gauche div {
