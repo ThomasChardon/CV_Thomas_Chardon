@@ -393,7 +393,6 @@ footer .footer .contenu_gauche {
   .contenu .contenu_droite {
     width: 100%;
     margin-left: 0;
-    padding-left: 30px;
     background: -webkit-gradient(linear, left top, left bottom, from(white), to(#C6D9F1));
     background: linear-gradient(white, #C6D9F1);
   }
@@ -402,6 +401,8 @@ footer .footer .contenu_gauche {
 @media screen and (min-width: 320px) and (max-width: 599px) {
   .contenu .contenu_droite .liste_contenu_droite {
     width: 85%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
