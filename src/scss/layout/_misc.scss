@@ -2,13 +2,70 @@
 //liens
 a {
     text-decoration: none;
-    color:$noir;
+    // color:$noir;
+    color:inherit;
     cursor: pointer;
+    // magic button hover effect - appears and scales from bottom
+	&.magic-btn::before {
+		content: ' ';
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		left: -2px;
+		padding: 0 2px;
+		
+		width: calc(100% + 2px);
+		height: 1px;
+		// border-bottom: 1px solid $couleur-primaire;
+		
+		transition: 0.4s;
+	}
+	&.magic-btn::after {
+		content: ' ';
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		left: calc(50% - 4px);
+		padding: 0 2px;
+		
+		width: 0;
+		height: 0;
+		
+		border: 1px solid transparent;
+		
+		transition: 0.4s;
+	}
+	
+	&.magic-btn:hover::before {
+		border-color: transparent;
+	}
+	&.magic-btn:hover::after {
+		width: 100%;
+		height: 0.7em;
+		left: -1em;
+		bottom: -0.35em;
+		padding: 0.5em 1em;
+		border-color: $couleur-primaire;
+		background-color: $couleur-primaire;
+		border-radius: 2.5em;
+	}
+	&.magic-btn {
+		display: inline-block;
+		
+		transition: 0.3s;
+		transition-delay: 0s;
+		transform: scale(1);
+	}
+	&.magic-btn:hover {
+		color: #fff;	
+		transform: scale(1.4);
+		transition-delay: 0.11s;
+	}
 }
-a:hover {
-    text-decoration:underline;
-    background-color: $couleur-secondaire;
-}
+// a:hover {
+//     text-decoration:underline;
+//     background-color: $couleur-secondaire;
+// }
 
 // formulaire
 

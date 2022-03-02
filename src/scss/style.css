@@ -76,13 +76,68 @@
 
 a {
   text-decoration: none;
-  color: #000;
+  color: inherit;
   cursor: pointer;
 }
 
-a:hover {
-  text-decoration: underline;
-  background-color: #e0c9be;
+a.magic-btn::before {
+  content: ' ';
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: -2px;
+  padding: 0 2px;
+  width: calc(100% + 2px);
+  height: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+a.magic-btn::after {
+  content: ' ';
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: calc(50% - 4px);
+  padding: 0 2px;
+  width: 0;
+  height: 0;
+  border: 1px solid transparent;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+a.magic-btn:hover::before {
+  border-color: transparent;
+}
+
+a.magic-btn:hover::after {
+  width: 100%;
+  height: 0.7em;
+  left: -1em;
+  bottom: -0.35em;
+  padding: 0.5em 1em;
+  border-color: #E1741A;
+  background-color: #E1741A;
+  border-radius: 2.5em;
+}
+
+a.magic-btn {
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+a.magic-btn:hover {
+  color: #fff;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  -webkit-transition-delay: 0.11s;
+          transition-delay: 0.11s;
 }
 
 input:focus {
@@ -511,612 +566,6 @@ footer .footer .contenu_gauche {
 @media screen and (min-width: 320px) and (max-width: 1099px) {
   .contenu .contenu_droite .liste_contenu_droite div {
     font-weight: normal;
-  }
-}
-
-.produit_seul {
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 1.3em;
-  margin-right: 65px;
-  margin-left: 65px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 500px;
-  margin-top: 65px;
-  margin-bottom: 65px;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 6px 6px #cccccc;
-          box-shadow: 0 6px 6px #cccccc;
-  overflow: hidden;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1599px) {
-  .produit_seul {
-    font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-    font-size: small;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .produit_seul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    height: 1000px;
-  }
-}
-
-.produit_seul .description_produit {
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  width: 50%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .produit_seul .description_produit {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    height: 400px;
-  }
-}
-
-.produit_seul div {
-  width: 50%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .produit_seul div {
-    width: 100%;
-  }
-}
-
-.produit_seul h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 1.3em;
-  margin: 0;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.produit_seul .produit_ours {
-  width: 100%;
-  height: 510px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .produit_seul .produit_ours {
-    height: 600px;
-    border-bottom-right-radius: 0;
-  }
-}
-
-.produit_seul .produit_ours:hover {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.titre_panier {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 65px;
-  margin-top: 65px;
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 2em;
-}
-
-.titre_panier h1 {
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
-  margin: 0;
-  margin-left: 65px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .titre_panier h1 {
-    font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-    font-size: 1em;
-  }
-}
-
-.titre_panier #suppression_panier {
-  background-color: #ff6a6a;
-}
-
-.article_panier {
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 1.3em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 65px;
-  width: 100%;
-  height: 200px;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 4px 4px #e6e6e6;
-          box-shadow: 0 4px 4px #e6e6e6;
-  color: #000;
-  overflow: hidden;
-}
-
-@media screen and (min-width: 1100px) and (max-width: 1600px) {
-  .article_panier {
-    font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-    font-size: small;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .article_panier {
-    font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-    font-size: small;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 450px;
-  }
-}
-
-.article_panier div {
-  overflow: hidden;
-}
-
-.article_panier .renseignements_panier {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  width: 70%;
-}
-
-@media screen and (min-width: 1100px) and (max-width: 1600px) {
-  .article_panier .renseignements_panier {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .article_panier .renseignements_panier {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin-top: 20px;
-  }
-}
-
-.article_panier .renseignements_panier .div_boutons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 25%;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1600px) {
-  .article_panier .renseignements_panier .div_boutons {
-    width: 100%;
-    height: 80px;
-    -ms-flex-line-pack: center;
-        align-content: center;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 1600px) {
-  .article_panier .renseignements_panier .div_boutons button {
-    margin: 10px;
-  }
-}
-
-.article_panier .renseignement_texte {
-  width: 70%;
-  height: 40px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1600px) {
-  .article_panier .renseignement_texte {
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1099px) {
-  .article_panier .renseignement_texte {
-    height: 80px;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 599px) {
-  .article_panier .renseignement_texte {
-    font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-    font-size: small;
-  }
-}
-
-.article_panier #titre_total {
-  width: 200px;
-}
-
-.article_panier .bordure_panier {
-  width: 5px;
-  height: 100%;
-  background-color: #e6e6e6;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .article_panier .bordure_panier {
-    display: none;
-  }
-}
-
-.article_panier .produit_ours_panier {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .article_panier .produit_ours_panier {
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
-.article_panier .photo_produit_panier {
-  width: 33%;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .article_panier .photo_produit_panier {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 100%;
-    height: 200px;
-  }
-}
-
-.article_panier:hover a img {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.article_panier h2 {
-  width: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-right: 30px;
-  padding-left: 30px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .article_panier h2 {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-}
-
-.renseignement_finalisation {
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 4px 4px #e6e6e6;
-          box-shadow: 0 4px 4px #e6e6e6;
-  background-color: #e6e6e6;
-  height: 350px;
-  margin-bottom: 65px;
-}
-
-@media screen and (min-width: 1100px) and (max-width: 1600px) {
-  .renseignement_finalisation {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .renseignement_finalisation {
-    font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    width: 100%;
-    height: 500px;
-    margin-top: 50px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 1100px) and (max-width: 1600px) {
-  .renseignement_finalisation h2 {
-    font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-    font-size: 1em;
-  }
-}
-
-.renseignement_finalisation #renseignement_total {
-  margin-left: 30px;
-  text-align: center;
-}
-
-.renseignement_finalisation .renseignements_panier {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 1.3em;
-  height: 100%;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1099px) {
-  .renseignement_finalisation .renseignements_panier {
-    width: 80%;
-  }
-}
-
-.renseignement_finalisation .renseignements_panier div {
-  width: 100%;
-}
-
-.renseignement_finalisation .renseignements_panier div label {
-  display: inline-block;
-  clear: left;
-  width: 250px;
-  text-align: right;
-}
-
-@media screen and (min-width: 320px) and (max-width: 600px) {
-  .renseignement_finalisation .renseignements_panier div label {
-    text-align: center;
-  }
-}
-
-.renseignement_finalisation .renseignements_panier div input {
-  display: inline-block;
-  height: 30px;
-  width: 400px;
-  border-radius: 20px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 600px) {
-  .renseignement_finalisation .renseignements_panier div input {
-    width: 230px;
-  }
-}
-
-.renseignement_finalisation .renseignements_panier div .bouton_commander {
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  width: 400px;
-  position: relative;
-  left: -150px;
-  margin-top: 10px;
-}
-
-@media screen and (min-width: 1100px) and (max-width: 1600px) {
-  .renseignement_finalisation .renseignements_panier div .bouton_commander {
-    left: -50px;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1099px) {
-  .renseignement_finalisation .renseignements_panier div .bouton_commander {
-    margin-top: 20px;
-    left: 80px;
-    width: 250px;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 599px) {
-  .renseignement_finalisation .renseignements_panier div .bouton_commander {
-    margin-top: 20px;
-    left: 50px;
-    width: 150px;
-  }
-}
-
-#finalisation {
-  font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  margin-right: 2em;
-  margin-left: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 600px;
-  border-radius: 40px;
-  -webkit-box-shadow: 0 4px 4px #e6e6e6;
-          box-shadow: 0 4px 4px #e6e6e6;
-  background-color: #E1741A;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1600px) {
-  #finalisation {
-    padding: 50px;
-  }
-}
-
-@media screen and (min-width: 800px) and (max-width: 1200px) {
-  #finalisation {
-    height: 700px;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 799px) {
-  #finalisation {
-    height: 600px;
-    font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 599px) {
-  #finalisation {
-    font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
-  }
-}
-
-#finalisation #adresse_facturation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 4px 4px #000;
-          box-shadow: 0 4px 4px #000;
-  background-color: #e0c9be;
-  height: 150px;
-  width: 900px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1600px) {
-  #finalisation #adresse_facturation {
-    padding: 20px;
-  }
-}
-
-@media screen and (min-width: 800px) and (max-width: 1100px) {
-  #finalisation #adresse_facturation {
-    width: 500px;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 799px) {
-  #finalisation #adresse_facturation {
-    width: 350px;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 599px) {
-  #finalisation #adresse_facturation {
-    font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-    height: 200px;
-    width: 150px;
   }
 }
 /*# sourceMappingURL=style.css.map */
