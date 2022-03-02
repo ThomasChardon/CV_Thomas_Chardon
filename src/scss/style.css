@@ -117,8 +117,8 @@ a.magic-btn:hover::after {
   left: -1em;
   bottom: -0.35em;
   padding: 0.5em 1em;
-  border-color: #E1741A;
-  background-color: #E1741A;
+  border-color: #ffae6c;
+  background-color: #ffae6c;
   border-radius: 2.5em;
 }
 
