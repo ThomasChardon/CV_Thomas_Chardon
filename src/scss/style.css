@@ -157,6 +157,18 @@ body {
   }
 }
 
+.icone_mini {
+  height: 13px;
+  width: 13px;
+}
+
+.icone_moyenne {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 5px;
+}
+
 header .entete {
   font-family: 'Ubuntu', cursive, Arial, Helvetica, sans-serif;
   font-size: 2.5em;
