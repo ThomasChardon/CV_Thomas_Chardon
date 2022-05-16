@@ -26,22 +26,24 @@
                 justify-content: space-between;
                 align-items: center;
                 color : $couleur-primaire;
-                margin-top: 0;
-                .deco_h_gauche {
-                    content: "";
-                    height: 4px;
-                    background: black;
-                    width: 15%;
-                    margin-left: 0;
-                }
-                .deco_h_droite {
-                    content: ""; 
-                    height: 4px;
-                    background: black;
-                    width: 15%;
-                    margin-right: 0;
-                }
+                // margin-top: 0;
+                @media screen and (min-width: 600px) and (max-width: 1099px)  {
+                    @include police(0.75em);
+                } 
             }
+            h3::before, h3::after {
+                content: "";
+                height: 5px;
+                background-color: black;
+                flex-grow: 1;
+            }
+            h3::before {
+                margin-right: 2rem;
+            }
+            h3::after {
+                margin-left: 2rem;
+            }
+
             div {
                 @include police(0.75em);
                 font-weight: bold;
@@ -70,16 +72,13 @@
         }
     }
     .Contact {
-        padding-top: 25px;
+        // padding-top: 25px;
     }
     .contenu_droite {
-        width: 1200px;
-        margin-left : 30px;
-        @media screen and (min-width: 1100px) and (max-width: 1599px)  {
-            width: 700px;
-        } 
+        width: calc(100% - 380px);
+        flex-grow: 1;
         @media screen and (min-width: 600px) and (max-width: 1099px)  {
-            width: 450px;
+            width: calc(100% - 230px);
         } 
         @media screen and (min-width: 320px) and (max-width: 599px)  {
             width: 100%;
@@ -87,40 +86,26 @@
             background: linear-gradient(white, $couleur-tertiaire);
         } 
         .liste_contenu_droite { 
-            @media screen and (min-width: 320px) and (max-width: 599px)  {
-                width: 85%;
-                margin-left : auto;
-                margin-right : auto;
-            } 
-            h3{
+            h3 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
                 color : $couleur-primaire;
-                position: relative;
-                @media screen and (min-width: 320px) and (max-width: 599px)  {
-                    text-align: center;
-                } 
             }
-            h3:after {
-                display: inline-block;
+            h3::before, h3::after {
                 content: "";
-                height: 4px;
-                background: black;
-                position: absolute;
-                width: 1250px;
-                top: 50%;
-                margin-top: -2px;
-                margin-left: 100px;
-                overflow-wrap: break-word;
-                @media screen and (min-width: 1100px) and (max-width: 1599px)  {
-                    width: 800px;
-                } 
-                @media screen and (min-width: 600px) and (max-width: 1099px)  {
-                    width: 400px;
-                } 
-                @media screen and (min-width: 320px) and (max-width: 599px)  {
-                    display: none;
-                }
-              }
+                height: 5px;
+                background-color: black;
+                flex-grow: 1;
+            }
+            h3::before {
+                margin-right: 2rem;
+            }
+            h3::after {
+                margin-left: 2rem;
+            }
             div{
+                margin-left : 30px;
                 @include police(0.75em);
                 font-weight: bold;
                 @include puces-liste();
